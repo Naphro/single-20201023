@@ -54,16 +54,30 @@ header {
 
     ul {
       display: none;
+      width: 200px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateY(35%);
+      border: 1px solid #eee;
+      background-color: #ffffff;
+      padding: 1rem 0;
+      z-index: 10;
     }
 
     li {
       padding: 0 1rem;
+      position: relative;
     }
 
     a {
       line-height: 2;
       > * {
         // vertical-align: middle;
+      }
+
+      &:focus ~ ul {
+        display: block;
       }
     }
 
